@@ -59,9 +59,13 @@ public class LogInController implements Initializable {
         }
     }
 
-    public void signUp(ActionEvent actionEvent) throws Exception {
-        Desktop desktop = Desktop.getDesktop();
-        desktop.browse(new URI("https://www.youtube.com/watch?v=wpV-gGA4PSk"));
+    public void signUp(ActionEvent actionEvent) {
+        try{
+            Desktop desktop = Desktop.getDesktop();
+            desktop.browse(new URI("https://www.youtube.com/watch?v=wpV-gGA4PSk"));
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please check your internet connection, to sign up to the platform");
+            alert.showAndWait();
+        }
     }
-
 }
