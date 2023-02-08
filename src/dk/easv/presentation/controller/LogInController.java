@@ -61,7 +61,7 @@ public class LogInController implements Initializable {
 
     public void signUp(ActionEvent actionEvent) throws Exception {
         Desktop desktop = Desktop.getDesktop();
-        desktop.browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+        desktop.browse(new URI("https://www.youtube.com/watch?v=wpV-gGA4PSk"));
     }
 
 }
