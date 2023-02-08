@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;1,600&display=swap%27');
+
+AnchorPane
+{
+    -fx-background-color: white;
+    -fx-font-family: "Saira", sans-serif;
+    -fx-font-weight: normal;
+}
+
+#search
+{
+    -fx-background-radius: 25;
+}
+
+.labels
+{
+    -fx-font-style: italic;
+    -fx-font-weight: 600;
+}
+
+.scroll-bar
+{
+    -fx-background-color: black;
+    -fx-opacity: 0.2;
+    -fx-border-radius: 100;
+    -fx-border-color: transparent;
+}
+
+.track
+{
+    -fx-border-radius: 10;
+}
+
+.increment-arrow, .decrement-arrow
+{
+    -fx-background-color: transparent;
+}
+
+.list-view
+{
+    -fx-border-style: hidden;
+    -fx-background-color: transparent;
+}
+
+.list-cell
+{
+    -fx-background-color: linear-gradient(white, black);
+    -fx-background-radius: 15;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-pref-width: 180;
+    -fx-background-insets: 0 5 0 5;
+    -fx-border-insets: 0 5 0 5;
+}
+
+.list-cell:hover
+{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian ,black, 10, 0, 0, 5);
+}
+
+#topMenu
+{
+    -fx-background-color: gray;
+}
+
+Button
+{
+    -fx-background-radius: 15;
+    -fx-background-color: tranparent;
+    -fx-font-size: 14;
+}
+
+Button:hover
+{
+    -fx-background-color: lightgray;
+
+}
