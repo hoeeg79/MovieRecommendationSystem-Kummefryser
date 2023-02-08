@@ -13,7 +13,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -56,8 +59,9 @@ public class LogInController implements Initializable {
         }
     }
 
-    public void signUp(ActionEvent actionEvent) {
-        System.out.println("Sign-Up");
+    public void signUp(ActionEvent actionEvent) throws Exception {
+        Desktop desktop = Desktop.getDesktop();
+        desktop.browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
     }
 
 }
