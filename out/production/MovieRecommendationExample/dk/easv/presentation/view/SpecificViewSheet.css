@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+AnchorPane{
+    -fx-font-family: 'Cantata One', serif;
+    -fx-font-size: 14;
+
+}
+
+#topMenu{
+    -fx-background-color: gray;
+
+}
+#sideMenu{
+    -fx-background-color: grey;
+}
+#pain{
+    -fx-background-color: gray;
+}
+#painRelief{
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+}
+
+Button{
+    -fx-background-color: transparent;
+
+}
+
+#anchorPaneGhettoFix{
+    -fx-background-color: transparent;
+}
