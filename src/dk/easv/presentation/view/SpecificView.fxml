@@ -110,6 +110,6 @@
       </Pane>
       <Pane id="pain" layoutX="-123.0" layoutY="-150.0" prefHeight="263.0" prefWidth="275.0" />
       <Circle id="painRelief" fill="WHITE" layoutX="150.0" layoutY="111.0" radius="30.0" stroke="WHITE" strokeType="INSIDE" />
-      <ListView fx:id="LView" layoutX="152.0" layoutY="113.0" prefHeight="657.0" prefWidth="818.0" />
+      <ListView fx:id="LView" layoutX="168.0" layoutY="129.0" prefHeight="657.0" prefWidth="818.0" />
    </children>
 </AnchorPane>
