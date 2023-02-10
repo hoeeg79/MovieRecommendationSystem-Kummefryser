@@ -76,7 +76,7 @@ AnchorPane
 
 .list-cell:focused
 {
-    -fx-background-color: linear-gradient(white, black);
+    -fx-background-color: linear-gradient(transparent, black);
 }
 
 #topMenu
