@@ -2,14 +2,24 @@ package dk.easv.presentation.controller;
 
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
+    @FXML
+    private Button btnMovies;
     @FXML
     private ListView<User> lvUsers;
     @FXML
@@ -60,5 +70,34 @@ public class AppController implements Initializable {
 
         // Select the logged-in user in the listview, automagically trigger the listener above
         lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+    }
+
+    @FXML
+    private void handleMoviesBtn(ActionEvent actionEvent) {
+        changeView();
+    }
+
+    @FXML
+    private void handleTVSeriesBtn(ActionEvent actionEvent) {
+        changeView();
+    }
+
+    private void changeView(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/SpecificView.fxml"));
+            Parent root = loader.load();
+            Stage currentStage = (Stage) btnMovies.getScene().getWindow();
+            currentStage.setScene(new Scene(root));
+            currentStage.setTitle("Movie Recommendation System 0.01 Beta");
+            currentStage.show();
+            SpecificViewController controller = loader.getController();
+
+            controller.setModel(model);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+            alert.showAndWait();
+        }
     }
 }
