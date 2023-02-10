@@ -3,7 +3,7 @@
 
 AnchorPane
 {
-    -fx-background-color: white;
+    -fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
     -fx-font-family: "Saira", sans-serif;
     -fx-font-weight: normal;
 }
@@ -15,21 +15,31 @@ AnchorPane
 
 .labels
 {
-    -fx-font-style: italic;
+    -fx-text-fill: white;
     -fx-font-weight: 600;
 }
 
 .scroll-bar
 {
-    -fx-background-color: black;
-    -fx-opacity: 0.2;
+    -fx-background-color: transparent;
     -fx-border-radius: 100;
-    -fx-border-color: transparent;
+    -fx-padding: 0 -12 0 -12;
+}
+
+.thumb
+{
+    -fx-background-radius: 25;
+    -fx-pref-width: 50;
+    -fx-background-color: gray;
+    -fx-blend-mode: multiply;
 }
 
 .track
 {
-    -fx-border-radius: 10;
+    -fx-background-color: lightgray;
+    -fx-background-radius: 25;
+    -fx-border-radius: 100;
+    -fx-blend-mode: overlay;
 }
 
 .increment-arrow, .decrement-arrow
@@ -63,7 +73,7 @@ AnchorPane
 
 #topMenu
 {
-    -fx-background-color: gray;
+    -fx-background-color: #3f6164;
 }
 
 Button
@@ -71,10 +81,12 @@ Button
     -fx-background-radius: 15;
     -fx-background-color: tranparent;
     -fx-font-size: 14;
+    -fx-text-fill: white;
 }
 
 Button:hover
 {
     -fx-background-color: lightgray;
-
+    -fx-blend-mode: overlay;
+    -fx-text-fill: gray;
 }
