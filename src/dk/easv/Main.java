@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-/*
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("presentation/view/LogIn.fxml"));
@@ -15,19 +15,10 @@ public class Main extends Application {
         // primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-    }*/
+    }
 
 
     public static void main(String[] args) {
         launch(args);
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("presentation/view/SpecificView.fxml"));
-        stage.setTitle("titel eller noget");
-        stage.setScene(new Scene(root));
-        stage.show();
-
     }
 }
