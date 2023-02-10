@@ -8,11 +8,11 @@ AnchorPane{
 }
 
 #topMenu{
-    -fx-background-color: #3f6164;
+    -fx-background-color: #374745;
 
 }
 #sideMenu{
-    -fx-background-color: #3f6164;
+    -fx-background-color: #374745;
 }
 #pain{
     -fx-background-color: gray;
@@ -24,6 +24,7 @@ AnchorPane{
 
 Button{
     -fx-background-color: transparent;
+    -fx-text-fill: white;
 
 }
 
@@ -33,4 +34,12 @@ Button{
 
 #Searcher{
     -fx-background-radius: 25;
+}
+
+Text{
+    -fx-text-fill: white;
+}
+
+.text-input{
+    -fx-text-fill: white;
 }
