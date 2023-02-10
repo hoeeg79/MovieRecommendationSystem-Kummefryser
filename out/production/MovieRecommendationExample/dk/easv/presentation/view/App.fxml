@@ -48,7 +48,7 @@
       <VBox layoutY="100.0" prefHeight="701.0" prefWidth="1000.0" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <Label styleClass="labels" text="Recommended" />
-            <ListView fx:id="lvTopFromSimilar" fixedCellSize="5.0" nodeOrientation="LEFT_TO_RIGHT" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="100.0">
+            <ListView fx:id="lvTopFromSimilar" nodeOrientation="LEFT_TO_RIGHT" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="100.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
