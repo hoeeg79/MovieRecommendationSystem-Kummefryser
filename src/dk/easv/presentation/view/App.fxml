@@ -10,18 +10,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <Pane id="topMenu" prefHeight="100.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1000.0" styleClass="textFont" stylesheets="@CSS/AppSheet.css">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="Movies">
+                  <Button fx:id="btnMovies" mnemonicParsing="false" onAction="#handleMoviesBtn" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="Movies">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="TV-Series">
+                  <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleTVSeriesBtn" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="TV-Series">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
