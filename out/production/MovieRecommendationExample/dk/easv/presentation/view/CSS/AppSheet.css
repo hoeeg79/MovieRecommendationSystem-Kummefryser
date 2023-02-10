@@ -3,7 +3,7 @@
 
 AnchorPane
 {
-    -fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
+    -fx-background-color: linear-gradient(#274745 0%, #1F2827 60%);
     -fx-font-family: "Saira", sans-serif;
     -fx-font-weight: normal;
 }
@@ -55,7 +55,7 @@ AnchorPane
 
 .list-cell
 {
-    -fx-background-color: linear-gradient(white, black);
+    -fx-background-image: url("no_image.jpg");
     -fx-background-radius: 15;
     -fx-border-style: solid;
     -fx-border-width: 1;
@@ -63,17 +63,19 @@ AnchorPane
     -fx-pref-width: 180;
     -fx-background-insets: 0 5 0 5;
     -fx-border-insets: 0 5 0 5;
+    -fx-text-fill: transparent;
 }
 
 .list-cell:hover
 {
+    -fx-background-color: linear-gradient(white, black);
     -fx-text-fill: white;
     -fx-effect: dropshadow(gaussian ,black, 10, 0, 0, 5);
 }
 
 #topMenu
 {
-    -fx-background-color: #3f6164;
+    -fx-background-color: #274745;
 }
 
 Button
