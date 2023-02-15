@@ -1,9 +1,6 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +12,6 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class SpecificViewController {
     @FXML
@@ -24,25 +20,30 @@ public class SpecificViewController {
     @FXML
     private Button btnLogo;
 
+
+
     public void setModel(AppModel model) {
         this.model = model;
         LView.setItems(model.getObsTopMovieNotSeen());
+        System.out.println(model.getObsLoggedInUser());
     }
+
     @FXML
     private void handleReturnBtn(ActionEvent actionEvent) {
-        try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
-        Parent root = loader.load();
-        Stage currentStage = (Stage) btnLogo.getScene().getWindow();
-        currentStage.setScene(new Scene(root));
-        currentStage.setTitle("Movie Recommendation System 0.01 Beta");
-        currentStage.show();
-        AppController controller = loader.getController();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+            Parent root = loader.load();
+            Stage currentStage = (Stage) btnLogo.getScene().getWindow();
+            currentStage.setScene(new Scene(root));
+            currentStage.setTitle("Movie Recommendation System 0.01 Beta");
+            currentStage.show();
+            AppController controller = loader.getController();
 
-        controller.setModel(model);
-    } catch (IOException e) {
-        e.printStackTrace();
-        Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
-        alert.showAndWait();
+            controller.setModelSecondTime(model);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+            alert.showAndWait();
+        }
     }
-}}
+}

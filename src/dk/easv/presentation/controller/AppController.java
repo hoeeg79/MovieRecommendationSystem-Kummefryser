@@ -50,13 +50,8 @@ public class AppController implements Initializable {
 
     }
 
-    public void setModel(AppModel model) {
-        this.model = model;
-        lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
+    public void setModelFirstLogin(AppModel model) {
+        loadModelAndLists(model);
 
         startTimer("Load users");
         model.loadUsers();
@@ -69,7 +64,26 @@ public class AppController implements Initializable {
                 });
 
         // Select the logged-in user in the listview, automagically trigger the listener above
-        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+        if(model.getObsLoggedInUser() != null) {
+            lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+        }
+    }
+
+    /**
+     * What about second breakfast?!
+     * @param model - Breakfast
+     */
+    public void setModelSecondTime(AppModel model){
+        loadModelAndLists(model);
+    }
+
+    private void loadModelAndLists(AppModel model){
+        this.model = model;
+        lvUsers.setItems(model.getObsUsers());
+        lvTopForUser.setItems(model.getObsTopMovieSeen());
+        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
+        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
+        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
     }
 
     @FXML
