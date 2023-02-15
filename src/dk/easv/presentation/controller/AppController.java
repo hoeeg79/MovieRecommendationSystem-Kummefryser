@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class AppController implements Initializable {
+public class AppController extends BaseController implements Initializable {
     @FXML
     private Button btnMovies;
     @FXML
@@ -88,31 +88,11 @@ public class AppController implements Initializable {
 
     @FXML
     private void handleMoviesBtn(ActionEvent actionEvent) {
-        changeView();
+        setSceneSpecificView(model,btnMovies);
     }
 
     @FXML
     private void handleTVSeriesBtn(ActionEvent actionEvent) {
-        changeView();
+        setSceneSpecificView(model,btnMovies);
     }
-
-    private void changeView(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/SpecificView.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage) btnMovies.getScene().getWindow();
-            currentStage.setScene(new Scene(root));
-            currentStage.show();
-            SpecificViewController controller = loader.getController();
-
-            controller.setModel(model);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load SpecificView.fxml");
-            alert.showAndWait();
-        }
-    }
-
-    
 }

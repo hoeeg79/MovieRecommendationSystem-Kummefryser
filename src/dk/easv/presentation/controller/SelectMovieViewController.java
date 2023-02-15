@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SelectMovieViewController {
+public class SelectMovieViewController extends BaseController{
 
     private AppModel model;
     @FXML
@@ -22,47 +22,15 @@ public class SelectMovieViewController {
         this.model = model;
     }
 
-
     public void handleMovieBtn(ActionEvent actionEvent) {
-        returnToMainView();
+        setSceneSelectMovie(model, btnMovie);
     }
 
     public void handleReturn(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage) btnMovie.getScene().getWindow();
-            currentStage.setScene(new Scene(root));
-            currentStage.show();
-            AppController controller = loader.getController();
-
-            controller.setModelSecondTime(model);
-        } catch (IOException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
-            alert.showAndWait();
-        }
+        setSceneApp(model, btnMovie);
     }
 
     public void handleSeriesBtn(ActionEvent actionEvent) {
-        returnToMainView();
-    }
-
-    private void returnToMainView(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/SpecificView.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage) btnMovie.getScene().getWindow();
-            currentStage.setScene(new Scene(root));
-            currentStage.show();
-            SpecificViewController controller = loader.getController();
-
-            controller.setModel(model);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
-            alert.showAndWait();
-        }
+        setSceneSpecificView(model, btnMovie);
     }
 }

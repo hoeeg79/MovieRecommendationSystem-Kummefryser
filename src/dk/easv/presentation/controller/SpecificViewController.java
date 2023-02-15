@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SpecificViewController {
+public class SpecificViewController extends BaseController{
     @FXML
     private ListView LView;
     private AppModel model;
@@ -29,19 +29,6 @@ public class SpecificViewController {
 
     @FXML
     private void handleReturnBtn(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage) btnLogo.getScene().getWindow();
-            currentStage.setScene(new Scene(root));
-            currentStage.show();
-            AppController controller = loader.getController();
-
-            controller.setModelSecondTime(model);
-        } catch (IOException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
-            alert.showAndWait();
-        }
+        setSceneApp(model, btnLogo);
     }
 }
