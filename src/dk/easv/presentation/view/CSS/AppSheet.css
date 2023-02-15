@@ -8,11 +8,6 @@ AnchorPane
     -fx-font-weight: normal;
 }
 
-#search
-{
-    -fx-background-radius: 25;
-}
-
 .labels
 {
     -fx-text-fill: white;
@@ -100,4 +95,17 @@ AnchorPane
     -fx-background-color: lightgray;
     -fx-blend-mode: overlay;
     -fx-text-fill: gray;
+}
+
+.text-field
+{
+    -fx-background-radius: 25;
+}
+
+#search
+{
+    -fx-background-image: url("/search_icon.png");
+    -fx-background-position: right center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: 0 -8 0 0;
 }
