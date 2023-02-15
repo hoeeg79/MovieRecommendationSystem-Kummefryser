@@ -109,7 +109,7 @@ public class AppController implements Initializable {
 
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load SpecificView.fxml");
             alert.showAndWait();
         }
     }

@@ -25,7 +25,6 @@ public class SpecificViewController {
     public void setModel(AppModel model) {
         this.model = model;
         LView.setItems(model.getObsTopMovieNotSeen());
-        System.out.println(model.getObsLoggedInUser());
     }
 
     @FXML
