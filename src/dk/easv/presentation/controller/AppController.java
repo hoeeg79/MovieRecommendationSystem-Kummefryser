@@ -4,16 +4,10 @@ import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -23,13 +17,13 @@ public class AppController extends BaseController implements Initializable {
     @FXML
     private ListView<User> lvUsers;
     @FXML
-    private ListView<Movie> lvTopForUser;
+    private ListView<Movie> lvFavorites;
     @FXML
-    private ListView<Movie> lvTopAvgNotSeen;
+    private ListView<Movie> lvTrending;
     @FXML
     private ListView<UserSimilarity> lvTopSimilarUsers;
     @FXML
-    private ListView<TopMovie> lvTopFromSimilar;
+    private ListView<TopMovie> lvRecommended;
 
 
     private AppModel model;
@@ -47,7 +41,7 @@ public class AppController extends BaseController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        openSelection();
     }
 
     public void setModelFirstLogin(AppModel model) {
@@ -80,10 +74,10 @@ public class AppController extends BaseController implements Initializable {
     private void loadModelAndLists(AppModel model){
         this.model = model;
         lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
+        lvFavorites.setItems(model.getObsTopMovieSeen());
+        lvTrending.setItems(model.getObsTopMovieNotSeen());
         lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
+        lvRecommended.setItems(model.getObsTopMoviesSimilarUsers());
     }
 
     @FXML
@@ -94,5 +88,11 @@ public class AppController extends BaseController implements Initializable {
     @FXML
     private void handleTVSeriesBtn(ActionEvent actionEvent) {
         setSceneSpecificView(model,btnMovies);
+    }
+
+    private void openSelection(){
+        lvFavorites.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            setSceneSelectMovie(model, btnMovies, newValue);
+        }));
     }
 }

@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,13 +18,15 @@ public class SelectMovieViewController extends BaseController{
     private AppModel model;
     @FXML
     private Button btnMovie;
+    private Movie movie;
 
-    public void setModel(AppModel model) {
+    public void setModel(AppModel model, Movie movie) {
         this.model = model;
+        this.movie = movie;
     }
 
     public void handleMovieBtn(ActionEvent actionEvent) {
-        setSceneSelectMovie(model, btnMovie);
+        setSceneSpecificView(model, btnMovie);
     }
 
     public void handleReturn(ActionEvent actionEvent) {

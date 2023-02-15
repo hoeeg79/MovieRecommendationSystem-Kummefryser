@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -47,7 +48,7 @@ public class BaseController {
         }
     }
 
-    protected void setSceneSelectMovie(AppModel model, Button btn){
+    protected void setSceneSelectMovie(AppModel model, Button btn, Movie movie){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/SelectMovieView.fxml"));
             Parent root = loader.load();
@@ -56,7 +57,7 @@ public class BaseController {
             currentStage.show();
             SelectMovieViewController controller = loader.getController();
 
-            controller.setModel(model);
+            controller.setModel(model, movie);
 
         } catch (IOException e) {
             e.printStackTrace();
