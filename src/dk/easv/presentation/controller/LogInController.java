@@ -1,6 +1,5 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +15,6 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -43,7 +41,7 @@ public class LogInController implements Initializable {
                 stage.show();
                 AppController controller = loader.getController();
     
-                controller.setModel(model);
+                controller.setModelFirstLogin(model);
 
             } catch (IOException e) {
                 e.printStackTrace();
