@@ -35,7 +35,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#logIn" prefHeight="30.0" prefWidth="77.0" text="Login" />
+                  <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#logIn" prefHeight="30.0" prefWidth="77.0" text="Login" />
                   <Button mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="94.0" text="Sign Up" GridPane.columnIndex="1" />
                </children>
             </GridPane>

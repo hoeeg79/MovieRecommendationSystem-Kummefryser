@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -19,6 +20,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LogInController implements Initializable {
+    public Button btnLogin;
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
     private AppModel model;
@@ -37,11 +39,12 @@ public class LogInController implements Initializable {
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
-                stage.setTitle("Movie Recommendation System 0.01 Beta");
                 stage.show();
                 AppController controller = loader.getController();
     
                 controller.setModelFirstLogin(model);
+                Stage currentStage = (Stage) (btnLogin.getScene().getWindow());
+                currentStage.close();
 
             } catch (IOException e) {
                 e.printStackTrace();

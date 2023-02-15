@@ -35,7 +35,6 @@ public class SpecificViewController {
             Parent root = loader.load();
             Stage currentStage = (Stage) btnLogo.getScene().getWindow();
             currentStage.setScene(new Scene(root));
-            currentStage.setTitle("Movie Recommendation System 0.01 Beta");
             currentStage.show();
             AppController controller = loader.getController();
 

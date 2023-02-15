@@ -102,7 +102,6 @@ public class AppController implements Initializable {
             Parent root = loader.load();
             Stage currentStage = (Stage) btnMovies.getScene().getWindow();
             currentStage.setScene(new Scene(root));
-            currentStage.setTitle("Movie Recommendation System 0.01 Beta");
             currentStage.show();
             SpecificViewController controller = loader.getController();
 
