@@ -16,6 +16,8 @@ AnchorPane{
 }
 #pain{
     -fx-background-color: gray;
+    -fx-background-image: url("/MRSLogo.png");
+
 }
 #painRelief{
     -fx-background-radius: 20;
@@ -25,12 +27,10 @@ AnchorPane{
 Button{
     -fx-background-color: transparent;
     -fx-text-fill: white;
-
 }
 
 #anchorPaneGhettoFix{
     -fx-background-color: transparent;
-    -fx-background-image: url("/no_image.jpg");
 }
 
 #Searcher{
