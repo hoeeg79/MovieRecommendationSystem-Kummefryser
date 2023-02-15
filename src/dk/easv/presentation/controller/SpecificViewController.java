@@ -6,39 +6,43 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SpecificViewController {
     @FXML
     private ListView LView;
     private AppModel model;
+    @FXML
+    private Button btnLogo;
 
     public void setModel(AppModel model) {
         this.model = model;
-        //lvUsers.setItems(model.getObsUsers());
         LView.setItems(model.getObsTopMovieNotSeen());
-        //lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        //lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        //lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
-
-        //startTimer("Load users");
-        //model.loadUsers();
-        //stopTimer();
-
-        /*
-        lvUsers.getSelectionModel().selectedItemProperty().addListener(
-                (observableValue, oldUser, selectedUser) -> {
-                    startTimer("Loading all data for user: " + selectedUser);
-                    model.loadData(selectedUser);
-                });
-         */
-
-        // Select the logged-in user in the listview, automagically trigger the listener above
-        //lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
     }
+    @FXML
+    private void handleReturnBtn(ActionEvent actionEvent) {
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+        Parent root = loader.load();
+        Stage currentStage = (Stage) btnLogo.getScene().getWindow();
+        currentStage.setScene(new Scene(root));
+        currentStage.setTitle("Movie Recommendation System 0.01 Beta");
+        currentStage.show();
+        AppController controller = loader.getController();
 
-    public void handleReturnBtn(ActionEvent actionEvent) {
+        controller.setModel(model);
+    } catch (IOException e) {
+        e.printStackTrace();
+        Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+        alert.showAndWait();
     }
-}
+}}
