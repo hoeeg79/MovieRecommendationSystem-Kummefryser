@@ -23,7 +23,7 @@ AnchorPane
 {
     -fx-background-color: transparent;
     -fx-border-radius: 100;
-    -fx-padding: 0 -12 0 -12;
+    -fx-padding: 5 -12 0 -12;
 }
 
 .thumb
@@ -55,13 +55,14 @@ AnchorPane
 
 .list-cell
 {
-    -fx-background-image: url("/no_image.jpg");
+    -fx-background-color: white;
+    -fx-background-image: url("/no_image.png");
     -fx-background-repeat: stretch;
-    -fx-background-position: center center;
-    -fx-background-radius: 15;
+    -fx-background-position: center;
+    -fx-background-radius: 10;
     -fx-border-style: solid;
     -fx-border-width: 1;
-    -fx-border-radius: 15;
+    -fx-border-radius: 10;
     -fx-pref-width: 180;
     -fx-background-insets: 0 5 0 5;
     -fx-border-insets: 0 5 0 5;
@@ -70,13 +71,15 @@ AnchorPane
 
 .list-cell:hover
 {
-    -fx-text-fill: white;
-    -fx-effect: dropshadow(gaussian ,black, 10, 0, 0, 5);
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+    -fx-background-image: url("/no_image.png");
+    -fx-background-color: linear-gradient(rgba(255, 255, 255), rgba(0, 0, 0));
 }
 
 .list-cell:focused
 {
-    -fx-background-color: linear-gradient(transparent, black);
+    -fx-background-color: linear-gradient(rgba(255, 255, 255), rgba(0, 0, 0));
 }
 
 #topMenu
@@ -84,7 +87,7 @@ AnchorPane
     -fx-background-color: #274745;
 }
 
-Button
+.button
 {
     -fx-background-radius: 15;
     -fx-background-color: transparent;
@@ -92,7 +95,7 @@ Button
     -fx-text-fill: white;
 }
 
-Button:hover
+.button:hover
 {
     -fx-background-color: lightgray;
     -fx-blend-mode: overlay;
