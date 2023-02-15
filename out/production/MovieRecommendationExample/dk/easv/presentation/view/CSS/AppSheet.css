@@ -87,7 +87,7 @@ AnchorPane
 Button
 {
     -fx-background-radius: 15;
-    -fx-background-color: tranparent;
+    -fx-background-color: transparent;
     -fx-font-size: 14;
     -fx-text-fill: white;
 }
