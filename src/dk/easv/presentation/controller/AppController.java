@@ -94,5 +94,8 @@ public class AppController extends BaseController implements Initializable {
         lvFavorites.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             setSceneSelectMovie(model, btnMovies, newValue);
         }));
+        lvTrending.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            setSceneSelectMovie(model, btnMovies, newValue);
+        }));
     }
 }
