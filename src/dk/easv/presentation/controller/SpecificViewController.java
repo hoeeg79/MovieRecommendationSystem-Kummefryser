@@ -4,6 +4,7 @@ import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 
@@ -36,5 +37,8 @@ public class SpecificViewController {
 
         // Select the logged-in user in the listview, automagically trigger the listener above
         //lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+    }
+
+    public void handleReturnBtn(ActionEvent actionEvent) {
     }
 }
