@@ -1,15 +1,16 @@
 AnchorPane{
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
-    //-fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
-}
-
-#paneOne{
-    -fx-background-color: 374745;
-}
-#paneTwo{
-    -fx-background-color: 374745;
+    -fx-background-color: #374745;
+;
 }
 #btnLogo{
     -fx-background-image: url("/MRSLogo.png");
+}
+
+.button{
+    -fx-background-radius: 15;
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
 }
