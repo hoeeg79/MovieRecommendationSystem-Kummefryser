@@ -4,7 +4,6 @@ AnchorPane{
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
     -fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
-
 }
 
 #topMenu{
@@ -14,11 +13,8 @@ AnchorPane{
 #sideMenu{
     -fx-background-color: #374745;
 }
-#pain{
-    -fx-background-color: gray;
 
-}
-#painRelief{
+#circle{
     -fx-background-radius: 20;
     -fx-background-color: white;
 }
