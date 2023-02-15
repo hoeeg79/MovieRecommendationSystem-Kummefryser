@@ -1,31 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
 
 AnchorPane{
-    -fx-background-color: linear-gradient(#374745 0%, #1F2827 60%);
+    -fx-background-color: linear-gradient(#274745 0%, #1F2827 60%);
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
 }
 
 #topMenu{
-    -fx-background-color: #374745;
+    -fx-background-color: #274745;
 
 }
 #sideMenu{
-    -fx-background-color: #374745;
+    -fx-background-color: #274745;
 }
 
 #circle{
     -fx-background-radius: 20;
     -fx-stroke: none;
-    -fx-fill: linear-gradient(#274745 0%, #1F2827 60%);
+    -fx-fill: linear-gradient(#264140, #243d3b);
 }
 #btnLogo{
     -fx-background-image: url("/MRSLogo.png");
 }
 
-Button{
+#btnLogo:hover
+{
     -fx-background-color: transparent;
+    -fx-blend-mode: none;
+}
+
+.button
+{
+    -fx-background-radius: 15;
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
     -fx-text-fill: white;
+}
+
+.button:hover
+{
+    -fx-background-color: lightgray;
+    -fx-blend-mode: overlay;
+    -fx-text-fill: gray;
 }
 
 #anchorPaneGhettoFix{
@@ -33,6 +49,11 @@ Button{
 
 #Searcher{
     -fx-background-radius: 25;
+    -fx-text-fill: black;
+    -fx-background-image: url("/search_icon.png");
+    -fx-background-position: right center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: 0 -8 0 0;
 }
 
 Text{
@@ -46,7 +67,6 @@ Text{
 .list-cell
 {
     -fx-background-color: white;
-    -fx-background-image: url("/no_image.png");
     -fx-background-repeat: stretch;
     -fx-background-position: center;
     -fx-background-radius: 10;
@@ -54,16 +74,14 @@ Text{
     -fx-border-width: 1;
     -fx-border-radius: 10;
     -fx-pref-width: 180;
-    -fx-background-insets: 0 5 0 5;
-    -fx-border-insets: 0 5 0 5;
-    -fx-text-fill: transparent;
+    -fx-background-insets: 5 0 5 0;
+    -fx-border-insets: 5 0 5 0;
+    -fx-text-fill: black;
 }
 
 .list-cell:hover
 {
-    -fx-text-fill: black;
     -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
-    -fx-background-image: url("/no_image.png");
     -fx-background-color: linear-gradient(rgba(255, 255, 255), rgba(0, 0, 0));
 }
 
@@ -76,7 +94,7 @@ Text{
 {
     -fx-background-color: transparent;
     -fx-border-radius: 100;
-    -fx-padding: 5 -12 0 -12;
+    -fx-padding: -12 5 -12 5;
 }
 
 .thumb

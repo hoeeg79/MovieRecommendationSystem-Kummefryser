@@ -15,7 +15,7 @@
    <children>
       <Pane id="topMenu" prefHeight="81.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <HBox id="btnReturn" alignment="CENTER" prefHeight="81.0" prefWidth="1000.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1000.0" spacing="10.0">
                <children>
                   <Button mnemonicParsing="false" text="Movie" />
                   <Button mnemonicParsing="false" text="Series" />
@@ -108,8 +108,8 @@
             </VBox>
          </children>
       </Pane>
-      <Circle id="painRelief" fill="WHITE" layoutX="157.0" layoutY="118.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
       <Button id="btnLogo" fx:id="btnLogo" mnemonicParsing="false" onAction="#handleReturnBtn" prefHeight="115.0" prefWidth="159.0" />
+      <Circle id="circle" fill="WHITE" layoutX="157.0" layoutY="118.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
       <ListView fx:id="LView" layoutX="130.0" layoutY="87.0" prefHeight="699.0" prefWidth="856.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
    </children>
 </AnchorPane>
