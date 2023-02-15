@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
 
 AnchorPane{
+    -fx-background-color: linear-gradient(#274745 0%, #1F2827 60%);
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
-    -fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
-
 }
 
 #topMenu{
@@ -20,7 +19,8 @@ AnchorPane{
 }
 #painRelief{
     -fx-background-radius: 20;
-    -fx-background-color: white;
+    -fx-stroke: none;
+    -fx-fill: linear-gradient(#274745 0%, #1F2827 60%);
 }
 #btnLogo{
     -fx-background-image: url("/MRSLogo.png");
@@ -32,7 +32,6 @@ Button{
 }
 
 #anchorPaneGhettoFix{
-    -fx-background-color: transparent;
 }
 
 #Searcher{
@@ -45,4 +44,67 @@ Text{
 
 .text-input{
     -fx-text-fill: white;
+}
+
+.list-cell
+{
+    -fx-background-color: white;
+    -fx-background-image: url("/no_image.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center;
+    -fx-background-radius: 10;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-pref-width: 180;
+    -fx-background-insets: 0 5 0 5;
+    -fx-border-insets: 0 5 0 5;
+    -fx-text-fill: transparent;
+}
+
+.list-cell:hover
+{
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+    -fx-background-image: url("/no_image.png");
+    -fx-background-color: linear-gradient(rgba(255, 255, 255), rgba(0, 0, 0));
+}
+
+.list-cell:focused
+{
+    -fx-background-color: linear-gradient(rgba(255, 255, 255), rgba(0, 0, 0));
+}
+
+.scroll-bar
+{
+    -fx-background-color: transparent;
+    -fx-border-radius: 100;
+    -fx-padding: 5 -12 0 -12;
+}
+
+.thumb
+{
+    -fx-background-radius: 25;
+    -fx-pref-width: 50;
+    -fx-background-color: gray;
+    -fx-blend-mode: multiply;
+}
+
+.track
+{
+    -fx-background-color: lightgray;
+    -fx-background-radius: 25;
+    -fx-border-radius: 100;
+    -fx-blend-mode: overlay;
+}
+
+.increment-arrow, .decrement-arrow
+{
+    -fx-background-color: transparent;
+}
+
+.list-view
+{
+    -fx-border-style: hidden;
+    -fx-background-color: transparent;
 }

@@ -47,7 +47,6 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     public void setModelFirstLogin(AppModel model) {
@@ -113,6 +112,4 @@ public class AppController implements Initializable {
             alert.showAndWait();
         }
     }
-
-    
 }

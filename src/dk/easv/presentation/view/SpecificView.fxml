@@ -108,8 +108,8 @@
             </VBox>
          </children>
       </Pane>
-      <Button id="btnLogo" fx:id="btnLogo" mnemonicParsing="false" onAction="#handleReturnBtn" prefHeight="115.0" prefWidth="159.0" />
       <Circle id="painRelief" fill="WHITE" layoutX="157.0" layoutY="118.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
-      <ListView fx:id="LView" layoutX="168.0" layoutY="129.0" prefHeight="657.0" prefWidth="818.0" />
+      <Button id="btnLogo" fx:id="btnLogo" mnemonicParsing="false" onAction="#handleReturnBtn" prefHeight="115.0" prefWidth="159.0" />
+      <ListView fx:id="LView" layoutX="130.0" layoutY="87.0" prefHeight="699.0" prefWidth="856.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
    </children>
 </AnchorPane>
