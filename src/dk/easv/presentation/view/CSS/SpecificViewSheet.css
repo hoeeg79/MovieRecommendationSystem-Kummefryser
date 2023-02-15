@@ -30,6 +30,7 @@ Button{
 
 #anchorPaneGhettoFix{
     -fx-background-color: transparent;
+    -fx-background-image: url("/no_image.jpg");
 }
 
 #Searcher{

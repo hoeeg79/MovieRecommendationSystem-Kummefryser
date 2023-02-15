@@ -4,17 +4,16 @@ AnchorPane{
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
     -fx-background-color: linear-gradient(#3f6164 0%, #1F2827 40%);
+
 }
 
 #topMenu{
-    -fx-background-color: #3f6164;
+    -fx-background-color: #374745;
 
 }
 #sideMenu{
-    -fx-background-color: #3f6164;
-
+    -fx-background-color: #374745;
 }
-
 #pain{
     -fx-background-color: gray;
 }
@@ -25,6 +24,7 @@ AnchorPane{
 
 Button{
     -fx-background-color: transparent;
+    -fx-text-fill: white;
 
 }
 
@@ -34,4 +34,12 @@ Button{
 
 #Searcher{
     -fx-background-radius: 25;
+}
+
+Text{
+    -fx-text-fill: white;
+}
+
+.text-input{
+    -fx-text-fill: white;
 }
