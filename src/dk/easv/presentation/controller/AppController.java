@@ -47,7 +47,7 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        singleSelection();
+
     }
 
     public void setModelFirstLogin(AppModel model) {
@@ -114,35 +114,5 @@ public class AppController implements Initializable {
         }
     }
 
-    private void selectRecommended() {
-        lvTopFromSimilar.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-                lvTopAvgNotSeen.getSelectionModel().clearSelection();
-                lvTopForUser.getSelectionModel().clearSelection();
-
-        }));
-    }
-
-    private void selectTrending() {
-        lvTopAvgNotSeen.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-                lvTopFromSimilar.getSelectionModel().clearSelection();
-                lvTopForUser.getSelectionModel().clearSelection();
-        }));
-    }
-
-    private void selectFavorites(){
-        lvTopForUser.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-                lvTopFromSimilar.getSelectionModel().clearSelection();
-                lvTopAvgNotSeen.getSelectionModel().clearSelection();
-
-        }));
-    }
-
-    /**
-     * Deselect other lists when making a new selection
-     */
-    private void singleSelection() {
-        selectRecommended();
-        selectTrending();
-        selectFavorites();
-    }
+    
 }
