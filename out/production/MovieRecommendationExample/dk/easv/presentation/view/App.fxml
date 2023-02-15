@@ -13,29 +13,29 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <Pane id="topMenu" prefHeight="100.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1000.0" styleClass="textFont" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" styleClass="textFont" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="btnMovies" mnemonicParsing="false" onAction="#handleMoviesBtn" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="Movies">
+            <Button fx:id="btnMovies" mnemonicParsing="false" onAction="#handleMoviesBtn" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Movies">
                <HBox.margin>
                   <Insets left="25.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleTVSeriesBtn" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="TV-Series">
+            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleTVSeriesBtn" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="TV-Series">
                <HBox.margin>
                   <Insets left="25.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="64.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="Random Movies">
+            <Button layoutX="64.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Random Movies">
                <HBox.margin>
                   <Insets left="25.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="118.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" stylesheets="@CSS/AppSheet.css" text="Random TV-Series">
+            <Button layoutX="118.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Random TV-Series">
                <HBox.margin>
                   <Insets left="25.0" />
                </HBox.margin>
             </Button>
-            <TextField id="search" promptText="Search" HBox.hgrow="SOMETIMES">
+            <TextField id="search" maxWidth="200.0" promptText="Search" HBox.hgrow="SOMETIMES">
                <HBox.margin>
                   <Insets left="25.0" right="25.0" />
                </HBox.margin>
