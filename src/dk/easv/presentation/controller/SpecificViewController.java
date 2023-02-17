@@ -27,7 +27,7 @@ public class SpecificViewController extends BaseController{
         LView.setItems(model.getObsTopMovieNotSeen());
     }
 
-    @FXML
+    @FXML 
     private void handleReturnBtn(ActionEvent actionEvent) {
         setSceneApp(model, btnLogo);
     }
