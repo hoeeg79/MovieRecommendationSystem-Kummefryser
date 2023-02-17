@@ -47,7 +47,7 @@ public class SelectMovieViewController extends BaseController{
 
     @FXML
     private void handleRandomSeries(ActionEvent actionEvent) {
-        trollBtn2();
+        trollBtn1();
     }
 
     @FXML
@@ -59,7 +59,8 @@ public class SelectMovieViewController extends BaseController{
         setSceneSelectMovie(model,btnMovie,rMovie);
     }
 
-    public void handlePlay(ActionEvent actionEvent) {
+    @FXML
+    private void handlePlay(ActionEvent actionEvent) {
         trollBtn2();
     }
 }
