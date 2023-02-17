@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class SelectMovieViewController extends BaseController{
 
@@ -47,6 +48,10 @@ public class SelectMovieViewController extends BaseController{
 
     @FXML
     private void handleRandomMovie(ActionEvent actionEvent) {
-        trollBtn1();
+        Random r = new Random();
+        int boundForRandom = model.getObsTopMovieNotSeen().size();
+        Movie rMovie = model.getObsTopMovieNotSeen().get(r.nextInt(boundForRandom) - 1);
+
+        setSceneSelectMovie(model,btnMovie,rMovie);
     }
 }

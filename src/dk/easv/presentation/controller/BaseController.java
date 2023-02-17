@@ -81,7 +81,7 @@ public class BaseController {
     protected void trollBtn2(){
         try{
             Desktop desktop = Desktop.getDesktop();
-            desktop.browse(new URI("https://www.youtube.com/watch?v=mghhLqu31cQ"));
+            desktop.browse(new URI("https://www.youtube.com/watch?v=Kppx4bzfAaE"));
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "boooo");
             alert.showAndWait();
