@@ -25,15 +25,28 @@ public class SelectMovieViewController extends BaseController{
         this.movie = movie;
     }
 
-    public void handleMovieBtn(ActionEvent actionEvent) {
+    @FXML
+    private void handleMovieBtn(ActionEvent actionEvent) {
         setSceneSpecificView(model, btnMovie);
     }
 
-    public void handleReturn(ActionEvent actionEvent) {
+    @FXML
+    private void handleReturn(ActionEvent actionEvent) {
         setSceneApp(model, btnMovie);
     }
 
-    public void handleSeriesBtn(ActionEvent actionEvent) {
+    @FXML
+    private void handleSeriesBtn(ActionEvent actionEvent) {
         setSceneSpecificView(model, btnMovie);
+    }
+
+    @FXML
+    private void handleRandomSeries(ActionEvent actionEvent) {
+        trollBtn2();
+    }
+
+    @FXML
+    private void handleRandomMovie(ActionEvent actionEvent) {
+        trollBtn1();
     }
 }

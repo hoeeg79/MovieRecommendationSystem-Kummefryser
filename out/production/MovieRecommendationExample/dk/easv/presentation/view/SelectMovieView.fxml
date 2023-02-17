@@ -26,12 +26,12 @@
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Random movie" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Random series" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>

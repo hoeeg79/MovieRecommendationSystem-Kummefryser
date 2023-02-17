@@ -31,4 +31,14 @@ public class SpecificViewController extends BaseController{
     private void handleReturnBtn(ActionEvent actionEvent) {
         setSceneApp(model, btnLogo);
     }
+
+    @FXML
+    private void handleRandomMovie(ActionEvent actionEvent) {
+        trollBtn1();
+    }
+
+    @FXML
+    private void handleRandomSeries(ActionEvent actionEvent) {
+        trollBtn2();
+    }
 }

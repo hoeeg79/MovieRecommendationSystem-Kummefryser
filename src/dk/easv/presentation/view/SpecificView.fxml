@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
+<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
    <children>
       <Pane id="topMenu" prefHeight="81.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -19,8 +19,8 @@
                <children>
                   <Button mnemonicParsing="false" text="Movie" />
                   <Button mnemonicParsing="false" text="Series" />
-                  <Button mnemonicParsing="false" text="Random Movie" />
-                  <Button mnemonicParsing="false" text="Random Series" />
+                  <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" />
+                  <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" />
                   <TextField id="Searcher">
                      <HBox.margin>
                         <Insets left="10.0" />

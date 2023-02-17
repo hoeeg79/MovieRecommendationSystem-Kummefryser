@@ -9,7 +9,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
 
 public class BaseController {
 
@@ -62,6 +64,26 @@ public class BaseController {
         } catch (IOException e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load SpecificView.fxml");
+            alert.showAndWait();
+        }
+    }
+
+    protected void trollBtn1(){
+        try{
+            Desktop desktop = Desktop.getDesktop();
+            desktop.browse(new URI("https://www.youtube.com/watch?v=ZZ5LpwO-An4"));
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "boooo");
+            alert.showAndWait();
+        }
+    }
+
+    protected void trollBtn2(){
+        try{
+            Desktop desktop = Desktop.getDesktop();
+            desktop.browse(new URI("https://www.youtube.com/watch?v=mghhLqu31cQ"));
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "boooo");
             alert.showAndWait();
         }
     }

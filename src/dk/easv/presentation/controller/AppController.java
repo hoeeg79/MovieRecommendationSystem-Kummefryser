@@ -98,4 +98,14 @@ public class AppController extends BaseController implements Initializable {
             setSceneSelectMovie(model, btnMovies, newValue);
         }));
     }
+
+    @FXML
+    private void handleRandomMovie(ActionEvent actionEvent) {
+        trollBtn1();
+    }
+
+    @FXML
+    private void handleRandomSeries(ActionEvent actionEvent) {
+        trollBtn2();
+    }
 }
