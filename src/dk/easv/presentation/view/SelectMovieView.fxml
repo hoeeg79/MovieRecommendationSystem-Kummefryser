@@ -51,7 +51,7 @@
             <Button layoutX="88.0" layoutY="266.0" mnemonicParsing="false" text="View later" textFill="WHITE" />
             <Button layoutX="177.0" layoutY="266.0" mnemonicParsing="false" text="Rating" textFill="WHITE" />
          </children></Pane>
-      <ImageView fitHeight="712.0" fitWidth="511.0" layoutX="484.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0">
+      <ImageView id="img" fitHeight="712.0" fitWidth="511.0" layoutX="484.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0">
          <image>
             <Image url="@../../../../../Resources/no_image.png" />
          </image></ImageView>

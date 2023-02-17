@@ -28,6 +28,13 @@ AnchorPane{
     -fx-background-color: #274745;
 }
 
+#img
+{
+    -fx-background-color: white;
+    -fx-background-radius: 25;
+    -fx-image: url("/no_image.png");
+}
+
 #Searcher{
     -fx-background-radius: 25;
     -fx-text-fill: black;
