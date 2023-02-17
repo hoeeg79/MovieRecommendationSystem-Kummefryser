@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class SpecificViewController extends BaseController{
     @FXML
@@ -30,5 +32,19 @@ public class SpecificViewController extends BaseController{
     @FXML
     private void handleReturnBtn(ActionEvent actionEvent) {
         setSceneApp(model, btnLogo);
+    }
+
+    @FXML
+    private void handleRandomMovie(ActionEvent actionEvent) {
+        Random r = new Random();
+        int boundForRandom = model.getObsTopMovieNotSeen().size();
+        Movie rMovie = model.getObsTopMovieNotSeen().get(r.nextInt(boundForRandom) - 1);
+
+        setSceneSelectMovie(model,btnLogo,rMovie);
+    }
+
+    @FXML
+    private void handleRandomSeries(ActionEvent actionEvent) {
+        trollBtn2();
     }
 }

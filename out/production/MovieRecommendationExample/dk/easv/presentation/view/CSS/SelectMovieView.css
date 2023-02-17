@@ -4,7 +4,7 @@
 AnchorPane{
     -fx-font-family: 'Cantata One', serif;
     -fx-font-size: 14;
-    -fx-background-color: #374745;
+    -fx-background-color: linear-gradient(#274745 0%, #1F2827 60%);
 ;
 }
 #btnLogo{
@@ -16,4 +16,17 @@ AnchorPane{
     -fx-background-color: transparent;
     -fx-font-size: 14;
     -fx-text-fill: white;
+}
+
+#paneOne{
+    -fx-background-color: #274745;
+}
+
+#Searcher{
+    -fx-background-radius: 25;
+    -fx-text-fill: black;
+    -fx-background-image: url("/search_icon.png");
+    -fx-background-position: right center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: 0 -8 0 0;
 }

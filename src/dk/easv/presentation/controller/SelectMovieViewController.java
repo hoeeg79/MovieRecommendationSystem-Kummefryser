@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class SelectMovieViewController extends BaseController{
 
@@ -29,15 +30,32 @@ public class SelectMovieViewController extends BaseController{
         lblTitle.textProperty().set(movie.getTitle() + " (" + movie.getYear() + ")");
     }
 
-    public void handleMovieBtn(ActionEvent actionEvent) {
+    @FXML
+    private void handleMovieBtn(ActionEvent actionEvent) {
         setSceneSpecificView(model, btnMovie);
     }
 
-    public void handleReturn(ActionEvent actionEvent) {
+    @FXML
+    private void handleReturn(ActionEvent actionEvent) {
         setSceneApp(model, btnMovie);
     }
 
-    public void handleSeriesBtn(ActionEvent actionEvent) {
+    @FXML
+    private void handleSeriesBtn(ActionEvent actionEvent) {
         setSceneSpecificView(model, btnMovie);
+    }
+
+    @FXML
+    private void handleRandomSeries(ActionEvent actionEvent) {
+        trollBtn2();
+    }
+
+    @FXML
+    private void handleRandomMovie(ActionEvent actionEvent) {
+        Random r = new Random();
+        int boundForRandom = model.getObsTopMovieNotSeen().size();
+        Movie rMovie = model.getObsTopMovieNotSeen().get(r.nextInt(boundForRandom) - 1);
+
+        setSceneSelectMovie(model,btnMovie,rMovie);
     }
 }
