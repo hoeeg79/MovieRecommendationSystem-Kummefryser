@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SelectMovieView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SelectMovieViewController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SelectMovieView.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SelectMovieViewController">
    <children>
       <Pane id="paneOne" prefHeight="115.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -49,7 +49,7 @@
          <children>
             <Label fx:id="lblTitle" layoutX="49.0" layoutY="199.0" text="Title" textFill="WHITE" />
             <Label fx:id="lblDescription" layoutX="49.0" layoutY="330.0" text="Description" textFill="WHITE" />
-            <Button layoutX="40.0" layoutY="266.0" mnemonicParsing="false" text="Play" textFill="WHITE" />
+            <Button layoutX="40.0" layoutY="266.0" mnemonicParsing="false" onAction="#handlePlay" text="Play" textFill="WHITE" />
             <Button layoutX="88.0" layoutY="266.0" mnemonicParsing="false" text="View later" textFill="WHITE" />
             <Button layoutX="177.0" layoutY="266.0" mnemonicParsing="false" text="Rating" textFill="WHITE" />
          </children></Pane>

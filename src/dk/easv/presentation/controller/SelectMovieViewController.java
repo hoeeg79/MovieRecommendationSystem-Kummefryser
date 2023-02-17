@@ -58,4 +58,8 @@ public class SelectMovieViewController extends BaseController{
 
         setSceneSelectMovie(model,btnMovie,rMovie);
     }
+
+    public void handlePlay(ActionEvent actionEvent) {
+        trollBtn2();
+    }
 }
