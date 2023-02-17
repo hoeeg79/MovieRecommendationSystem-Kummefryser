@@ -101,7 +101,11 @@ public class AppController extends BaseController implements Initializable {
 
     @FXML
     private void handleRandomMovie(ActionEvent actionEvent) {
-        trollBtn1();
+        Random r = new Random();
+        int boundForRandom = model.getObsTopMovieNotSeen().size();
+        Movie rMovie = model.getObsTopMovieNotSeen().get(r.nextInt(boundForRandom) - 1);
+
+        setSceneSelectMovie(model,btnMovies,rMovie);
     }
 
     @FXML
