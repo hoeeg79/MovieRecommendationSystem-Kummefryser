@@ -7,15 +7,22 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
     // Models of the data in the view
     private final ObservableList<User>  obsUsers = FXCollections.observableArrayList();
-    private final ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
-    private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
+    private ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
+    private List<Movie> topMovieSeen;
+    private ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
+    private List<Movie> topMovieNotSeen;
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
+    private ObservableList<Movie> obsMoviesSimilarUsers = FXCollections.observableArrayList();
+    private List<Movie> moviesSimilarUsers;
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
@@ -27,15 +34,25 @@ public class AppModel {
     public void loadData(User user) {
         obsTopMovieSeen.clear();
         obsTopMovieSeen.addAll(logic.getTopAverageRatedMovies(user));
+        topMovieSeen = obsTopMovieSeen.subList(0, 50);
+        obsTopMovieSeen = FXCollections.observableList(topMovieSeen);
 
         obsTopMovieNotSeen.clear();
         obsTopMovieNotSeen.addAll(logic.getTopAverageRatedMoviesUserDidNotSee(user));
+        topMovieNotSeen = obsTopMovieNotSeen.subList(0, 50);
+        obsTopMovieNotSeen = FXCollections.observableList(topMovieNotSeen);
 
         obsSimilarUsers.clear();
         obsSimilarUsers.addAll(logic.getTopSimilarUsers(user));
 
+
         obsTopMoviesSimilarUsers.clear();
         obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
+        moviesSimilarUsers = obsTopMoviesSimilarUsers.stream().map(obsTopMoviesSimilarUsers -> obsTopMoviesSimilarUsers.getMovie()).collect(Collectors.toList());
+        obsMoviesSimilarUsers = FXCollections.observableList(moviesSimilarUsers.subList(0, 50));
+    }
+    public ObservableList<Movie> getObsMoviesSimilarUsers() {
+        return obsMoviesSimilarUsers;
     }
 
     public ObservableList<User> getObsUsers() {

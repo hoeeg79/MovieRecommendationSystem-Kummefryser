@@ -11,25 +11,22 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
+<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
    <children>
-      <Pane id="topMenu" prefHeight="81.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Pane id="topMenu" prefHeight="81.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1000.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1000.0" spacing="10.0">
-               <children>
-                  <Button mnemonicParsing="false" text="Movie" />
-                  <Button mnemonicParsing="false" text="Series" />
-                  <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" />
-                  <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" />
-                  <TextField id="Searcher">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
-            </HBox>
+            <Button mnemonicParsing="false" text="Movie" />
+            <Button mnemonicParsing="false" text="Series" />
+            <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" />
+            <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" />
+            <TextField id="Searcher" promptText="Search">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
          </children>
-      </Pane>
+      </HBox>
       <Pane id="sideMenu" prefHeight="806.0" prefWidth="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <VBox alignment="CENTER" prefHeight="800.0" prefWidth="120.0">

@@ -23,7 +23,7 @@ public class AppController extends BaseController implements Initializable {
     @FXML
     private ListView<UserSimilarity> lvTopSimilarUsers;
     @FXML
-    private ListView<TopMovie> lvRecommended;
+    private ListView<Movie> lvRecommended;
 
 
     private AppModel model;
@@ -45,8 +45,6 @@ public class AppController extends BaseController implements Initializable {
     }
 
     public void setModelFirstLogin(AppModel model) {
-        loadModelAndLists(model);
-
         startTimer("Load users");
         model.loadUsers();
         stopTimer();
@@ -61,6 +59,8 @@ public class AppController extends BaseController implements Initializable {
         if(model.getObsLoggedInUser() != null) {
             lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
         }
+
+        loadModelAndLists(model);
     }
 
     /**
@@ -77,7 +77,14 @@ public class AppController extends BaseController implements Initializable {
         lvFavorites.setItems(model.getObsTopMovieSeen());
         lvTrending.setItems(model.getObsTopMovieNotSeen());
         lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvRecommended.setItems(model.getObsTopMoviesSimilarUsers());
+        lvRecommended.setItems(model.getObsMoviesSimilarUsers());
+        unselect();
+    }
+
+    private void unselect() {
+        lvRecommended.getSelectionModel().clearSelection();
+        lvTrending.getSelectionModel().clearSelection();
+        lvFavorites.getSelectionModel().clearSelection();
     }
 
     @FXML
@@ -91,6 +98,9 @@ public class AppController extends BaseController implements Initializable {
     }
 
     private void openSelection(){
+        lvRecommended.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) ->{
+            setSceneSelectMovie(model, btnMovies, newValue);
+        }));
         lvFavorites.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             setSceneSelectMovie(model, btnMovies, newValue);
         }));

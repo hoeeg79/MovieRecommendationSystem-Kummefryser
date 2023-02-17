@@ -11,6 +11,12 @@ AnchorPane{
     -fx-background-image: url("/MRSLogov69.png");
 }
 
+#btnLogo:hover
+{
+    -fx-background-color: transparent;
+    -fx-blend-mode: none;
+}
+
 .button{
     -fx-background-radius: 15;
     -fx-background-color: transparent;
@@ -29,4 +35,19 @@ AnchorPane{
     -fx-background-position: right center;
     -fx-background-repeat: no-repeat;
     -fx-background-insets: 0 -8 0 0;
+}
+
+.button
+{
+    -fx-background-radius: 15;
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.button:hover
+{
+    -fx-background-color: lightgray;
+    -fx-blend-mode: overlay;
+    -fx-text-fill: gray;
 }

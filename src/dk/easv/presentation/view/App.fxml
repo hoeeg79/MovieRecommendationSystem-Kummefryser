@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <Pane id="topMenu" prefHeight="100.0" prefWidth="1000.0" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" styleClass="textFont" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="25.0" styleClass="textFont" stylesheets="@CSS/AppSheet.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Button fx:id="btnMovies" mnemonicParsing="false" onAction="#handleMoviesBtn" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Movies">
                <HBox.margin>
@@ -22,17 +22,17 @@
             </Button>
             <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleTVSeriesBtn" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Series">
                <HBox.margin>
-                  <Insets left="25.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
             <Button layoutX="64.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleRandomMovie" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Random Movies">
                <HBox.margin>
-                  <Insets left="25.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
             <Button layoutX="118.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleRandomSeries" prefHeight="40.0" stylesheets="@CSS/AppSheet.css" text="Random Series">
                <HBox.margin>
-                  <Insets left="25.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
             <TextField id="search" maxWidth="200.0" promptText="Search" styleClass="text-field" stylesheets="@CSS/AppSheet.css">
