@@ -80,6 +80,9 @@ AnchorPane
 #topMenu
 {
     -fx-background-color: #274745;
+    -fx-background-image: url("/MRSLogov420.png");
+    -fx-background-position: left 1, center;
+    -fx-background-repeat: no-repeat;
 }
 
 .button
