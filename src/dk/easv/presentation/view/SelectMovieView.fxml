@@ -10,40 +10,40 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SelectMovieView.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SelectMovieViewController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SelectMovieView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SelectMovieViewController">
    <children>
-      <Pane id="paneOne" prefHeight="115.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER" prefHeight="115.0" prefWidth="1000.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Pane id="paneOne" prefHeight="100.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="btnMovie" mnemonicParsing="false" onAction="#handleMovieBtn" text="Movie" textFill="WHITE">
+            <Button fx:id="btnMovie" mnemonicParsing="false" onAction="#handleMovieBtn" prefHeight="30.0" text="Movies" textFill="WHITE">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#handleSeriesBtn" text="Series" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#handleSeriesBtn" prefHeight="30.0" text="Series" textFill="WHITE">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#handleRandomMovie" prefHeight="30.0" text="Random Movie" textFill="WHITE">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#handleRandomSeries" prefHeight="30.0" text="Random Series" textFill="WHITE">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <TextField id="Searcher" promptText="Search">
+            <TextField id="Searcher" maxWidth="200.0" promptText="Search">
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets />
                </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <Button id="btnLogo" maxHeight="115.0" maxWidth="159.0" minHeight="115.0" minWidth="159.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="115.0" prefWidth="159.0" />
-      <Pane id="paneTwo" layoutX="-6.0" layoutY="115.0" prefHeight="685.0" prefWidth="490.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="115.0">
+      <Button id="btnLogo" maxHeight="115.0" maxWidth="159.0" minHeight="100.0" minWidth="159.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="100.0" prefWidth="159.0" />
+      <Pane id="paneTwo" layoutX="-6.0" layoutY="101.0" prefHeight="699.0" prefWidth="490.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <Label fx:id="lblTitle" layoutX="49.0" layoutY="199.0" text="Title" textFill="WHITE" />
             <Label fx:id="lblDescription" layoutX="49.0" layoutY="330.0" text="Description" textFill="WHITE" />

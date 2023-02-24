@@ -11,16 +11,16 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
+<AnchorPane id="anchorPaneGhettoFix" prefHeight="800.0" prefWidth="1000.0" stylesheets="@CSS/SpecificViewSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SpecificViewController">
    <children>
-      <Pane id="topMenu" prefHeight="81.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1000.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Pane id="topMenu" prefHeight="100.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" text="Movie" />
-            <Button mnemonicParsing="false" text="Series" />
-            <Button mnemonicParsing="false" onAction="#handleRandomMovie" text="Random Movie" />
-            <Button mnemonicParsing="false" onAction="#handleRandomSeries" text="Random Series" />
-            <TextField id="Searcher" promptText="Search">
+            <Button mnemonicParsing="false" prefHeight="30.0" text="Movies" />
+            <Button mnemonicParsing="false" prefHeight="30.0" text="Series" />
+            <Button mnemonicParsing="false" onAction="#handleRandomMovie" prefHeight="30.0" text="Random Movie" />
+            <Button mnemonicParsing="false" onAction="#handleRandomSeries" prefHeight="30.0" text="Random Series" />
+            <TextField id="Searcher" maxWidth="200.0" promptText="Search">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -31,7 +31,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="800.0" prefWidth="120.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textClass" text="Categories" />
+                  <Text fill="#818181" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textClass" text="Categories" underline="true" />
                   <Button mnemonicParsing="false" text="Comedy">
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -82,7 +82,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textClass" text="Sort by">
+                  <Text fill="#818181" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textClass" text="Sort by" underline="true">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin></Text>
@@ -105,8 +105,9 @@
             </VBox>
          </children>
       </Pane>
+      <Pane id="sideMenu" layoutX="99.0" layoutY="63.0" prefHeight="74.0" prefWidth="58.0" />
+      <Circle id="circle" fill="WHITE" layoutX="157.0" layoutY="137.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
       <Button id="btnLogo" fx:id="btnLogo" mnemonicParsing="false" onAction="#handleReturnBtn" prefHeight="115.0" prefWidth="159.0" />
-      <Circle id="circle" fill="WHITE" layoutX="157.0" layoutY="118.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
-      <ListView fx:id="LView" layoutX="130.0" layoutY="87.0" prefHeight="699.0" prefWidth="856.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
+      <ListView fx:id="LView" layoutX="130.0" layoutY="87.0" prefHeight="699.0" prefWidth="856.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0" />
    </children>
 </AnchorPane>

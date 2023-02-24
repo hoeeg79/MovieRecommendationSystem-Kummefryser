@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;1,600&display=swap%27');
 
 AnchorPane
@@ -6,6 +5,7 @@ AnchorPane
     -fx-background-color: linear-gradient(#274745 0%, #1F2827 60%);
     -fx-font-family: "Saira", sans-serif;
     -fx-font-weight: normal;
+    -fx-font-size: 14;
 }
 
 .labels
